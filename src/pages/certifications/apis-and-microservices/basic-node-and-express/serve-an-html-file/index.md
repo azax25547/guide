@@ -11,7 +11,8 @@ To serve an index.html in a folder called "public" at the root domain you would 
 
 ```javascript
   app.get("/", function(req, res) {
-        res.sendFile( __dirname + "/public/index.html");
+        const absolutepath = __dirname + "/views/index.html"
+        res.sendFile(absolutepath);
   });
 ```
 
